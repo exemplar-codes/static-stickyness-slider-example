@@ -1,0 +1,58 @@
+#page {
+  background-color: coral;
+}
+
+#slider {
+  background-color: yellow;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.slider-closed {
+  color: red;
+  visibility: collapse;
+}
+
+.slider-open {
+  color: green;
+
+  overflow: hidden;
+}
+
+#slider-top {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#slider-footer {
+  background-color: skyblue;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+#slider-header {
+  background-color: skyblue;
+  flex-shrink: 0;
+}
+
+#slider-content {
+  background-color: lightcoral;
+  overflow: auto;
+}
+
+.slider-header-expanded {
+  height: 50px;
+}
+
+.slider-header-collapsed {
+  height: 30px;
+}

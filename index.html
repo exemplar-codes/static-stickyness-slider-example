@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body,
+      h3,
+      div {
+        margin: 0;
+        padding: 0;
+      } /*negate chrome default*/
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script defer>
+    function toggleSlider() {
+      let slider = document.getElementById("slider");
+      let newClass =
+        slider.getAttribute("class") === "slider-open"
+          ? "slider-closed"
+          : "slider-open";
+      slider.setAttribute("class", newClass);
+    }
+
+    let lastScrollOffset = 0;
+    function shortenSliderHeaderToggle(e) {
+      let sliderHeader = document.getElementById("slider-header");
+
+      let currentScrollOffset = e.target.scrollTop;
+      if (currentScrollOffset - lastScrollOffset > 0) {
+        sliderHeader.setAttribute("class", "slider-header-collapsed");
+      } else if (currentScrollOffset === 0) {
+        sliderHeader.setAttribute("class", "slider-header-expanded");
+      }
+      lastScrollOffset = currentScrollOffset;
+    }
+
+    function toggleSliderContentLength() {
+      let sliderExtra = document.getElementById("slider-content-extra");
+      sliderExtra.hidden = !sliderExtra.hidden;
+    }
+  </script>
+  <body>
+    <div id="page">
+      Page content
+
+      <br />
+      <button onclick="toggleSlider()">Toggle slider</button> <br /><button
+        onclick="toggleSliderContentLength()"
+      >
+        Toggle slider content
+      </button>
+    </div>
+    <div id="slider" class="slider-open">
+      <div id="slider-top">
+        <div id="slider-header" class="slider-header-expanded">
+          <h3>Slider header</h3>
+        </div>
+        <div id="slider-content" onscroll="shortenSliderHeaderToggle(event)">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+          suscipit non ipsam dignissimos incidunt quam excepturi nihil harum
+          esse, cum aliquid praesentium possimus, animi magni atque labore enim.
+          Qui,
+
+          <div id="slider-content-extra">
+            doloribus libero harum saepe animi dicta deserunt architecto laborum
+            modi recusandae possimus odit. Ipsum possimus illo perspiciatis
+            laborum, molestiae numquam tenetur pariatur ut corrupti. Dolor sint
+            rem debitis? In ad amet sit tempore sequi rerum voluptatibus, natus
+            quibusdam reprehenderit! Vel quo perferendis officia ipsa atque
+            autem numquam odit molestiae numquam tenetur pariatur ut corrupti.
+            Dolor sint rem debitis? In ad amet sit tempore sequi rerum
+            voluptatibus, natus quibusdam reprehenderit! Vel quo perferendis
+            officia ipsa atque autem numquam odit
+          </div>
+        </div>
+      </div>
+      <div id="slider-footer">Slider footer</div>
+    </div>
+  </body>
+</html>
