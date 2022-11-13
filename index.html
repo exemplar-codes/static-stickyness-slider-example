@@ -3,13 +3,13 @@
   <head>
     <style>
       body,
-      h3,
-      h1,
       div,
-      ul,
+      h1,
+      h2,
+      h3,
+      ol,
       li {
         margin: 0;
-        padding: 0;
       } /*negate chrome default*/
     </style>
     <link rel="stylesheet" href="style.css" />
@@ -44,16 +44,16 @@
   </script>
   <body>
     <div id="page">
-      Page content
+      <h1>Page content</h1>
 
-      <br />
-      <button onclick="toggleSlider()">Toggle slider</button> <br /><button
-        onclick="toggleSliderContentLength()"
-      >
-        Toggle slider content (length)
-      </button>
+      <div>
+        <button onclick="toggleSlider()">Toggle slider</button>
+        <button onclick="toggleSliderContentLength()">
+          Toggle slider content (length)
+        </button>
+      </div>
 
-      <h1>Problems fixed</h1>
+      <h2>Problems fixed</h2>
       <ol>
         <li>Slider footer respects long slider content.</li>
         <li>
@@ -61,6 +61,10 @@
           slider header.
         </li>
       </ol>
+      <h4>
+        Key insight: Preserve static flow by using flex instead of
+        position-fixed, hacked with overflow-hidden
+      </h4>
     </div>
     <div id="slider" class="slider-open">
       <div id="slider-top">
