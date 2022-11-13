@@ -1,7 +1,7 @@
 # static-stickyness-slider-example
 Example of cascading stickyness of HTML elements, demonstrated using a slider
 
-[See live demo](https://exemplar-codes.github.io/static-stickyness-sllder-example/)
+[See live demo](https://exemplar-codes.github.io/static-stickyness-slider-example/)
 
 <h2>Problems fixed</h2>
       <ol>
