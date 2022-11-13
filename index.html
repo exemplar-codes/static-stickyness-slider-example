@@ -4,7 +4,10 @@
     <style>
       body,
       h3,
-      div {
+      h1,
+      div,
+      ul,
+      li {
         margin: 0;
         padding: 0;
       } /*negate chrome default*/
@@ -47,8 +50,17 @@
       <button onclick="toggleSlider()">Toggle slider</button> <br /><button
         onclick="toggleSliderContentLength()"
       >
-        Toggle slider content
+        Toggle slider content (length)
       </button>
+
+      <h1>Problems fixed</h1>
+      <ol>
+        <li>Slider footer respects long slider content.</li>
+        <li>
+          Slider header collapse - Scrolling long slider content collapses
+          slider header.
+        </li>
+      </ol>
     </div>
     <div id="slider" class="slider-open">
       <div id="slider-top">
