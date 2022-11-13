@@ -1,4 +1,4 @@
-# static-stickyness-sllder-example
+# static-stickyness-slider-example
 Example of cascading stickyness of HTML elements, demonstrated using a slider
 
 [See live demo](https://exemplar-codes.github.io/static-stickyness-sllder-example/)
